@@ -10,11 +10,11 @@ class ListRepositoryImpl @Inject constructor(
     private  val api: CocktailsApi
 ) : ListRepository {
 
-    override suspend fun getPopularCocktails(): Response<CocktailsDto> {
+    override suspend fun getPopularCocktails(): List<CocktailsDto> {
         return api.getPopularCocktails()
     }
 
-    override suspend fun getLatestCocktails(): Response<CocktailsDto> {
+    override suspend fun getLatestCocktails(): List<CocktailsDto> {
         return api.getLatestCocktails()
     }
 
